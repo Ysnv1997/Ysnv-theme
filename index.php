@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2018-07-19 13:51:04
  * @Last Modified by:   Marte
- * @Last Modified time: 2018-07-22 12:09:23
+ * @Last Modified time: 2018-07-22 17:08:54
  */
 get_header();?>
     <!-- 顶部栏拓展 -->
@@ -107,7 +107,7 @@ get_header();?>
             <div id="article-list">
               <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
               <article class="post">
-                  <h2 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+                  <h2 class="post-title"><a href="<?php the_permalink() ?>"><?php  if( is_sticky() ) echo '&nbsp;&nbsp;<span style="color:red;">[置顶]</span>';the_title(); ?></a></h2>
                   <div class="row post-lining">
                       <div class="col-sm-3 post-img-c">
                       <?php if (get_post_thumbnail_url($post -> id)): ?>
