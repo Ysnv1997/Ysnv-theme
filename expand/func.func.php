@@ -3,8 +3,9 @@
  * @Author: Marte
  * @Date:   2018-07-19 14:40:50
  * @Last Modified by:   Marte
- * @Last Modified time: 2018-07-23 14:02:41
+ * @Last Modified time: 2018-07-23 14:35:35
  */
+add_filter('pre_option_link_manager_enabled','__return_true');
 // 屏蔽WordPress默认小工具
 add_action( 'widgets_init', 'my_unregister_widgets' );
 function my_unregister_widgets() {

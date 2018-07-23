@@ -33,10 +33,10 @@ get_header();?>
               </small>
             </header>
             <article class="article-text">
+              <article class="page-links">
+                  <?php echo get_link_items();?>
+              </article>
               <?php the_content(); ?>
-            <article class="page-links">
-                <?php echo get_link_items();?>
-            </article>
             </article>
           </article>
           <?php };?>
