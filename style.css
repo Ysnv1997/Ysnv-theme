@@ -9,6 +9,8 @@ Tags:博客,强大,国人
 */
 body,a,html{font-family:Lato,Helvetica,Arial,Microsoft Yahei,sans-serif!important;}
 body{background-color:#f6f6f6;text-shadow:0 0 1px rgba(0,0,0,.1);}
+*::-moz-selection{background:#000;color:#fff;}
+*::selection{background:#000;color:#fff;}
 
 /*导航*/
 #navbar ul{list-style:none;padding-left:0;}
@@ -45,19 +47,13 @@ body{background-color:#f6f6f6;text-shadow:0 0 1px rgba(0,0,0,.1);}
 
 /*热门推荐四个展位*/
 #container-box{margin-top:30px;}
-.new-top > .col-md-4,
-.new-top > .col-sm-4{
-    padding-left: 3px;
-    padding-right:3px;
-}
+.new-top > .col-md-4,.new-top > .col-sm-4{padding-left:3px;padding-right:3px;}
 .new-top{margin-bottom:20px;}
 .new-top-rec{height:180px;width:100%;background-color:#fff;border-radius:10px;overflow:hidden;position:relative;-webkit-box-shadow:1px 1px 3px rgba(0,0,0,.3);box-shadow:1px 1px 3px rgba(0,0,0,.3);}
 .top-rec-img{height:100%;width:100%;}
 .top-rec-img > img{max-width:100%;height:100%;}
 .top-rec-info{position:absolute;top:0;left:0;width:100%;height:100%;}
-.top-rec-info-name{position:absolute;top:55px;width:100%;background-color:#000;color:#fff;padding:10px 0;text-align:center;-webkit-transform:translateX(-100%);-ms-transform:translateX(-100%);transform:translateX(-100%);    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;}
+.top-rec-info-name{position:absolute;top:55px;width:100%;background-color:#000;color:#fff;padding:10px 0;text-align:center;-webkit-transform:translateX(-100%);-ms-transform:translateX(-100%);transform:translateX(-100%);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .top-rec-info-category{text-align:center;font-size:14px;color:#c3c3c3;position:absolute;width:100%;bottom:15px;display:block;-webkit-transform:translateX(100%);-ms-transform:translateX(100%);transform:translateX(100%);}
 .new-top-rec:hover .top-rec-info{background-color:rgba(0,0,0,.6);-webkit-transition:background .3s;-o-transition:background .3s;transition:background .3s;}
 .new-top-rec:hover .top-rec-info-name,.new-top-rec:hover .top-rec-info-category{-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;-o-transition:transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s;}
@@ -136,7 +132,7 @@ footer{font-size:16px;background-color:#fff;}
 .article-text table tr:nth-child(2n){background-color:#f8f8f8}
 .article-text ul{list-style:disc;border:1px dashed #E4E4E4;padding:15px 10px 15px 50px;color:#616161;margin-left:0;border-radius:10px}
 .article-text ol{list-style:decimal;border:1px dashed #E4E4E4;padding:15px 10px 15px 50px;color:#616161;margin-left:0;border-radius:10px}
-.article-text ol li,.article-text ul li{padding:8px 0;line-height: 1.5;}
+.article-text ol li,.article-text ul li{padding:8px 0;line-height:1.5;}
 .article-text{position:relative}
 .article-text h3{padding-bottom:8px;border-bottom:1px dashed #ddd;color:#737373}
 .article-text h3:before{content:"#";margin-right:5px;color:#FF6D6D}
@@ -323,32 +319,8 @@ pre[class*="language-"]{padding:1em;margin:.5em 0;overflow:auto;}
  */
 
 /* 友情链接 */
-.article-text > .page-links ul {
-    list-style: none;
-    overflow: hidden;
-    padding-left: 0px;
-    border: 0px dashed #E4E4E4;
-    border-top: 1px dashed #E4E4E4;
-}
-.article-text > .page-links .link-title {
-    font-size: 20px;
-    color: #404040;
-    position: relative;
-    margin-right: 5px;
-    margin-bottom: 18px;
-}
-.article-text > .page-links ul li {
-    float: left;
-    width: 33.33333%;
-    margin-bottom: 20px;
-}
-.article-text > .page-links ul li img {
-    width: 30px;
-    height: 30px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-}
-.article-text > .page-links ul li .sitename {
-    margin-left: 10px;
-}
+.article-text > .page-links ul{list-style:none;overflow:hidden;padding-left:0px;border:0px dashed #E4E4E4;border-top:1px dashed #E4E4E4;}
+.article-text > .page-links .link-title{font-size:20px;color:#404040;position:relative;margin-right:5px;margin-bottom:18px;}
+.article-text > .page-links ul li{float:left;width:33.33333%;margin-bottom:20px;}
+.article-text > .page-links ul li img{width:30px;height:30px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+.article-text > .page-links ul li .sitename{margin-left:10px;}
