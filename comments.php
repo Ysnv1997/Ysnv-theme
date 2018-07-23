@@ -87,7 +87,7 @@ if ( post_password_required() ) {
 						</div>
 						<div class="col-md-4 col-sm-4">
 							<label for="email">邮箱<span class="required">*</span></label>
-							<input type="email" name="email" id="email" class="comment-md-9" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
+							<input type="email" name="email" id="email" class="comment-md-9" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" data-toggle="tooltip" data-placement="top" title="使用正确的邮箱可以及时与本站通信哦！"/>
 						</div>
 						<div class="col-md-4 col-sm-4 comment-form-url">
 							<label for="url">网址<span class="required"></span></label>
