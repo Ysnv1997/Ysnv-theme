@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2018-07-19 13:51:21
  * @Last Modified by:   Marte
- * @Last Modified time: 2018-07-22 13:42:50
+ * @Last Modified time: 2018-07-23 14:23:11
  */
 ?>
 <!DOCTYPE html>
@@ -34,16 +34,11 @@
           bloginfo('description');
         }?>
     </title>
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/swiper.css">
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/flat-ui.css">
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/lightbox.css">
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css">
+    <?php wp_head(); ?>
     <script src="<?php bloginfo('template_url'); ?>/js/jquery.js"></script>
     <meta name="description" content="<?php echo stayma('stayma_info_description'); ?>" />
     <meta name="keywords" content="<?php echo stayma('stayma_info_keywords'); ?>" />
     <style type="text/css"><?php echo stayma('stayma_css'); ?></style>
-    <?php wp_head(); ?>
   </head>
   <body>
     <!-- 导航 -->
