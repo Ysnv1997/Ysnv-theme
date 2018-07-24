@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2018-07-19 14:40:50
  * @Last Modified by:   Marte
- * @Last Modified time: 2018-07-23 14:35:35
+ * @Last Modified time: 2018-07-24 21:03:51
  */
 add_filter('pre_option_link_manager_enabled','__return_true');
 // 屏蔽WordPress默认小工具
@@ -123,7 +123,7 @@ function get_post_thumbnail_url($post_id){
         if(!empty($matches[1][0])){
             $post_thumbnail_src = $matches[1][0];   //获取该图片 src
         }else{
-            $post_thumbnail_src = '';
+            $post_thumbnail_src = get_template_directory_uri().'/images/default.jpg';
         }
     }
     return $post_thumbnail_src;

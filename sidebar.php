@@ -31,9 +31,9 @@
   </div>
 </div>
 
-<?php if (stayma('stayma_ggw_3text')): ?>
+<?php if (stayma('stayma_ggw_1text')): ?>
 <div class="sidebar-box ggw3">
-  <?php echo stayma('stayma_ggw_3text'); ?>
+  <?php echo stayma('stayma_ggw_1text'); ?>
 </div>
 <?php endif ?>
 

@@ -3,30 +3,9 @@
  * @Author: Marte
  * @Date:   2018-07-19 13:51:04
  * @Last Modified by:   Marte
- * @Last Modified time: 2018-07-20 17:01:09
+ * @Last Modified time: 2018-07-24 18:20:19
  */
 get_header();?>
-    <!-- 顶部栏拓展 -->
-<!--     <div class="intr-header" style="background-image:url(<?php echo stayma('stayma_xxinfo_img') ?>)">
-            <div class="container">
-                <div class="row intr-header-info">
-                    <div>
-                        <h3><?php echo stayma('stayma_xxinfo_text1') ?></h3>
-                        <p><?php echo stayma('stayma_xxinfo_text2') ?></p>
-                    </div>
-                </div>
-            </div>
-    </div> -->
-
-
-<?php if(!empty(stayma('stayma_ggw_1img'))): ?>
-    <!-- 广告位1 -->
-    <div class="container ggw1 hidden-xs">
-        <a target="_blank" href="<?php echo stayma('stayma_ggw_1text'); ?>">
-        <img src="<?php echo stayma('stayma_ggw_1img'); ?>" alt="">
-        </a>
-    </div>
-<?php endif; ?>
     <!-- 主体内容开始 -->
     <div class="container" id="container-box">
       <div class="row">
@@ -64,17 +43,6 @@ get_header();?>
         </div>
       </div>
     </div>
-
-    <!-- 广告位2 -->
-    <div class="container-fluid hidden-xs ggw2">
-      <?php if(!empty(stayma('stayma_ggw_2img'))): ?>
-      <div class="container">
-        <a href="<?php echo stayma('stayma_ggw_2text'); ?>" target="_blank" rel="external nofloow">
-          <img src="<?php echo stayma('stayma_ggw_2img'); ?>"></a>
-      </div>
-       <?php endif; ?>
-    </div>
-
 <?php
     get_footer();
 ?>

@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2018-07-19 13:51:21
  * @Last Modified by:   Marte
- * @Last Modified time: 2018-07-23 14:23:11
+ * @Last Modified time: 2018-07-24 18:22:23
  */
 ?>
 <!DOCTYPE html>
@@ -38,6 +38,9 @@
     <script src="<?php bloginfo('template_url'); ?>/js/jquery.js"></script>
     <meta name="description" content="<?php echo stayma('stayma_info_description'); ?>" />
     <meta name="keywords" content="<?php echo stayma('stayma_info_keywords'); ?>" />
+    <style>
+
+    </style>
     <style type="text/css"><?php echo stayma('stayma_css'); ?></style>
   </head>
   <body>
@@ -77,8 +80,8 @@
     </header>
     <div class="search-s visible-xs-block">
       <div class="search-con">
-    <form id="search" method="get" class="clearfix" action="<?php echo home_url( '/' ); ?>">
-      <input type="text" class="form-control" id="inputSuccess5" aria-describedby="inputSuccess5Status" placeholder="输入关键词后回车" name="s">
-    </form>
+      <form id="search" method="get" class="clearfix" action="<?php echo home_url( '/' ); ?>">
+        <input type="text" class="form-control" id="inputSuccess5" aria-describedby="inputSuccess5Status" placeholder="输入关键词后回车" name="s">
+      </form>
       </div>
     </div>

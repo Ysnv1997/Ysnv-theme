@@ -2,106 +2,119 @@
 * @Author: Marte
 * @Date:   2018-07-19 15:14:29
 * @Last Modified by:   Marte
-* @Last Modified time: 2018-07-22 13:20:54
+* @Last Modified time: 2018-07-24 19:07:37
 */
 // 轮播图配置
 $(document).ready(function() {
-  // 轮播图样式1
-  var mySwiper = new Swiper ('#swiper-1', {
-    loop: true,
-    slidesPerView:1,
-    centeredSlides : true,
-    grabCursor : true,
-    // 如果需要分页器
-    pagination: '.swiper-pagination',
+        // 轮播图样式2
+        var mySwiper = new Swiper ('#swiper-1', {
+          loop: true,
+          slidesPerView:2,
+          centeredSlides : true,
+          grabCursor : true,
+          autoplay:8000,
+          // 如果需要分页器
+          pagination: '.swiper-pagination',
 
-    // 如果需要前进后退按钮
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
-    paginationClickable: true
-  })
-  // 轮播图样式2
-  var mySwiper = new Swiper ('#swiper-2', {
-    loop: true,
-    slidesPerView:2,
-    centeredSlides : true,
-    grabCursor : true,
-    // 如果需要分页器
-    pagination: '.swiper-pagination',
-
-    // 如果需要前进后退按钮
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
-    paginationClickable: true
-  })
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
-$(function() {
-    $('.article-text img').each(function(i){
-        if (! this.parentNode.href) {
-            $(this).wrap("<a href='"+this.src+"'data-lightbox=\"image-1\" data-title=\"My caption\"'></a>");
-        }
-    });
-});
-// 手机搜索设置
-$('#search').on('click',function(){
-    var open = $(this).attr('data-open');
-    var search_s = $('.search-s')
-    if(open == 'no'){
-        search_s.addClass('search-open');
-        $(this).attr('data-open','yes');
-    }else if(open == 'yes'){
-        search_s.removeClass('search-open');
-        $(this).attr('data-open','no');
-    }
-})
-
-// 返回顶部按钮出现
-$(window).scroll(function(e) {
-  var a = $(document).scrollTop();
-  if(a > 450){
-    $('.goTop').addClass('goTopShow')
-  }else{
-    $('.goTop').removeClass('goTopShow')
-  }
-});
-
-// 返回顶部按钮事件
-$('.goTop').on('click',function(){
-  $("html,body").animate({"scrollTop":0},600)
-})
-// ajax评论分页
-comAjax()
-function comAjax(){
-    var com_nav = $('#comments-navi'),
-        com_nav_but = $('#comments-navi > a'),
-        com_list = $('.commentlist'),
-        loading = $('#loading-comments');
-        com_nav_but.on('click',function(){
-          $.ajax({
-            url: $(this).attr('href'),
-            type: 'GET',
-            dataType: 'html',
-            beforeSend:function(){
-              loading.show();
-              com_list.fadeOut(600);
-              com_nav.remove();
-            },
-            success:function(data){
-              loading.hide();
-              var new_list = $(data).find('.commentlist'),
-                  new_nav = $(data).find('#comments-navi');
-              loading.after(new_list.fadeIn(600));
-              new_list.after(new_nav.fadeIn(600));
-              comAjax();
-              $(document).scrollTop($('.comment-box').offset().top)
-            }
-          })
-
-          return false;
+          // 如果需要前进后退按钮
+          nextButton: '.swiper-button-next',
+          prevButton: '.swiper-button-prev',
+          paginationClickable: true
         })
-  }
+        // 轮播图样式2
+        var mySwiper = new Swiper ('#swiper-2', {
+          loop: true,
+          slidesPerView:1,
+          centeredSlides : true,
+          grabCursor : true,
+          // 如果需要分页器
+          pagination: '.swiper-pagination',
+          autoplay:8000,
+          // 如果需要前进后退按钮
+          nextButton: '.swiper-button-next',
+          prevButton: '.swiper-button-prev',
+          paginationClickable: true
+        })
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+      $(function() {
+          $('.article-text img').each(function(i){
+              if (! this.parentNode.href) {
+                  $(this).wrap("<a href='"+this.src+"'data-lightbox=\"image-1\" data-title=\"My caption\"'></a>");
+              }
+          });
+      });
+      // 手机搜索设置
+      $('#search').on('click',function(){
+          var open = $(this).attr('data-open');
+          var search_s = $('.search-s')
+          if(open == 'no'){
+              search_s.addClass('search-open');
+              $(this).attr('data-open','yes');
+          }else if(open == 'yes'){
+              search_s.removeClass('search-open');
+              $(this).attr('data-open','no');
+          }
+      })
+
+      // 返回顶部按钮出现
+      $(window).scroll(function(e) {
+        var a = $(document).scrollTop();
+        if(a > 450){
+          $('.goTop').addClass('goTopShow')
+        }else{
+          $('.goTop').removeClass('goTopShow')
+        }
+      });
+
+      // 返回顶部按钮事件
+      $('.goTop').on('click',function(){
+        $("html,body").animate({"scrollTop":0},600)
+      })
+      // ajax评论分页
+      comAjax()
+      function comAjax(){
+          var com_nav = $('#comments-navi'),
+              com_nav_but = $('#comments-navi > a'),
+              com_list = $('.commentlist'),
+              loading = $('#loading-comments');
+              com_nav_but.on('click',function(){
+                $.ajax({
+                  url: $(this).attr('href'),
+                  type: 'GET',
+                  dataType: 'html',
+                  beforeSend:function(){
+                    loading.show();
+                    com_list.fadeOut(600);
+                    com_nav.remove();
+                  },
+                  success:function(data){
+                    loading.hide();
+                    var new_list = $(data).find('.commentlist'),
+                        new_nav = $(data).find('#comments-navi');
+                    loading.after(new_list.fadeIn(600));
+                    new_list.after(new_nav.fadeIn(600));
+                    comAjax();
+                    $(document).scrollTop($('.comment-box').offset().top)
+                  }
+                })
+
+                return false;
+              })
+        }
+        // 页尾展开收起
+        $(function(){
+          var footer_but= $('#footer-hidden-open'),
+              footer_list = $('.hidden-footer-list');
+              footer_but.on('click',function(){
+                  footer_list.slideToggle("slow")
+              })
+        })
+
+
+
+
 });
 // 代码高亮
 /* PrismJS 1.15.0

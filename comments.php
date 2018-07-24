@@ -102,7 +102,6 @@ if ( post_password_required() ) {
 							<textarea class="comment-textarea" name="comment" id="comment"  placeholder="说点什么吧..."></textarea>
 						</div>
 					</div>
-
 					<div class="form-submit">
 						<label class="checkbox checked" for="checkbox2"><span class="icon"></span><span class="icon-to-fade"></span>
 							<input type="checkbox" id="checkbox2" name="is-private">私密评论
