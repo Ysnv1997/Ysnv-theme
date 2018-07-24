@@ -1415,9 +1415,7 @@ img.wp-smiley {
     transform:translateX(-50%);
     border:8px solid #000;
 }
-#footer-hidden-open:hover:before{
-    transform:rotate(180deg);
-}
+
 .hidden-footer-list{
     padding-bottom:20px;
     border-bottom: 1px solid #333;
